@@ -2,6 +2,10 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
+# ---------------------------
+# General info routes
+# ---------------------------
+
 @app.route('/')
 def home():
     return jsonify({
@@ -11,16 +15,14 @@ def home():
 
 @app.route('/hello')
 def hello():
-    return jsonify({
-        'message': 'Hello, World!'
-    })
+    return jsonify({'message': 'Hello, World!'})
 
 @app.route('/api/info')
 def info():
     return jsonify({
         'app_name': 'Task Manager',
         'version': '1.0',
-        'author': 'omsekhar'
+        'author': 'zakariya'
     })
 
 @app.route('/api/status')
@@ -37,6 +39,14 @@ def add():
     b = int(request.args.get('b', 1))
     result = a + b
     return jsonify({'result': result})
+
+
+# ---------------------------
+# Task management endpoints
+# ---------------------------
+
+tasks = []
+task_id_counter = 1  # To generate unique IDs
 
 # Create a new task
 @app.route('/api/tasks', methods=['POST'])
@@ -107,5 +117,8 @@ def delete_task(task_id):
     return jsonify({'message': f'Task {task_id} deleted successfully'}), 200
 
 
+# ---------------------------
+# Run server
+# ---------------------------
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
