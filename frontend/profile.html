@@ -1,59 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Zakariya Yahya Ally - Profile</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="container">
 
-<center>
-    <h1>Zakariya Yahya Lly</h1>
+        <!-- Header -->
+        <div class="profile-header">
+            <img src="My_Photo.jpg" alt="My Photo">
+            <div class="header-info">
+                <h1>Zakariya Yahya Ally</h1>
+                <p><strong>Program:</strong> B.Tech in Data Science & AI</p>
+                <p><strong>Year:</strong> 3rd Year Student</p>
+            </div>
+        </div>
 
-    <img src="My Photo.jpg" alt="My Photo" width="150">
+        <!-- Basic Info & Education -->
+        <div class="info-section">
+            <div class="info-card">
+                <h2>Basic Information</h2>
+                <p><strong>Age:</strong> 21</p>
+                <p><strong>Institution:</strong> IIT Madras Zanzibar Campus</p>
+            </div>
 
-    <h2>Basic Information</h2>
-    <p><strong>Age:</strong> 21</p>
-    <p><strong>Program:</strong> B.Tech in Data Science & Artificial Intelligence</p>
-    <p><strong>Year:</strong> 3rd Year Student</p>
-    <p><strong>Institution:</strong> IIT Madras Zanzibar Campus</p>
+            <div class="info-card">
+                <h2>Education</h2>
+                <p>Bachelor of Science in Technology (B.Tech)</p>
+                <p>Data Science & AI</p>
+                <p>IIT Madras Zanzibar Campus</p>
+                <p>3rd Year Student</p>
+            </div>
+        </div>
 
-    <h2>About Me</h2>
-    <p>
-        I am a dedicated Data Science and Artificial Intelligence student at IIT Madras Zanzibar.
-        I enjoy learning new technologies, solving problems, and working on small projects that help
-        me improve my skills. I am hardworking, motivated, and always ready to learn.
-    </p>
+        <!-- About Me -->
+        <div class="about-card">
+            <h2>About Me</h2>
+            <p id="aboutMe">
+                I am a dedicated Data Science and Artificial Intelligence student at IIT Madras Zanzibar.
+                I enjoy learning new technologies, solving problems, and working on small projects that help
+                me improve my skills. I am hardworking, motivated, and always ready to learn.
+            </p>
+            <button onclick="toggleAbout()">Show/Hide About Me</button>
+        </div>
 
-    <h2>Skills</h2>
-    <ul style="list-style-position: inside; text-align: left;">
-        <li>HTML (Beginner)</li>
-        <li>Basic Python & Data Analysis</li>
-        <li>Communication</li>
-        <li>Teamwork</li>
-        <li>Problem Solving</li>
-        <li>Basic Computer Skills</li>
-    </ul>
+        <!-- Skills -->
+        <div class="skills-card">
+            <h2>Skills</h2>
+            <table id="skillsTable">
+                <tr>
+                    <th>Skill</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>HTML (Beginner)</td>
+                    <td>Create simple webpages using tags, images, lists, and structure.</td>
+                </tr>
+                <tr>
+                    <td>Python & Data Analysis</td>
+                    <td>Write basic Python scripts and perform data analysis using Pandas.</td>
+                </tr>
+                <tr>
+                    <td>Communication</td>
+                    <td>Communicate clearly in discussions, presentations, and teamwork.</td>
+                </tr>
+                <tr>
+                    <td>Teamwork</td>
+                    <td>Collaborate effectively with peers on projects and assignments.</td>
+                </tr>
+                <tr>
+                    <td>Problem Solving</td>
+                    <td>Analyze challenges and find logical solutions efficiently.</td>
+                </tr>
+                <tr>
+                    <td>Basic Computer Skills</td>
+                    <td>Handle MS Office, file management, typing, and general computer tasks.</td>
+                </tr>
+            </table>
+            <button onclick="highlightSkills()">Highlight Skills</button>
+        </div>
 
-    <h2>Education</h2>
-    <p>
-        Bachelor of Technology (B.Tech)<br>
-        Data Science & Artificial Intelligence<br>
-        Indian Institute of Technology Madras – Zanzibar Campus<br>
-        3rd Year Student
-    </p>
+        <!-- Contact -->
+        <div class="contact-card">
+            <h2>Contact Information</h2>
+            <p><strong>Email:</strong> zda23b024@iitmz.ac.in</p>
+            <p><strong>Phone:</strong> +255 773 083 703</p>
+            <button onclick="window.location.href='mailto:zda23b024@iitmz.ac.in'">Contact Me</button>
+            <button onclick="window.location.href='Zakariya_Cv.pdf'">Download CV</button>
+        </div>
 
-    <h2>Contact Information</h2>
-    <p><strong>Email:</strong> zda23b024@ds.study.iitm.ac.in</p>
-    <p><strong>Phone:</strong> +255 773 083 703</p>
+    </div>
 
-    <h2>Hobbies</h2>
-    <ul style="list-style-position: inside; text-align: left;">
-        <li>Reading and Learning</li>
-        <li>Small Coding Projects</li>
-        <li>Watching Tech and AI Videos</li>
-        <li>Sports</li>
-    </ul>
-</center>
-
+    <script src="script.js"></script>
 </body>
 </html>
