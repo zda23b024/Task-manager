@@ -81,13 +81,21 @@
             <button onclick="highlightSkills()">Highlight Skills</button>
         </div>
 
-        <!-- Contact -->
+        <!-- Contact Form -->
         <div class="contact-card">
-            <h2>Contact Information</h2>
-            <p><strong>Email:</strong> zda23b024@iitmz.ac.in</p>
-            <p><strong>Phone:</strong> +255 773 083 703</p>
-            <button onclick="window.location.href='mailto:zda23b024@iitmz.ac.in'">Contact Me</button>
-            <button onclick="window.location.href='Zakariya_Cv.pdf'">Download CV</button>
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Theme toggle & click counter -->
+        <div class="extra-interactive">
+            <button onclick="toggleTheme()">Toggle Dark Mode</button>
+            <button onclick="countClicks()">Click Me!</button>
+            <p id="clickCount">Clicks: 0</p>
         </div>
 
     </div>
